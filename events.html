@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Events Example</title>
+
+    <script>
+        // Key Event
+        function keyEvent() {
+            document.getElementById("keyMsg").innerHTML =
+                "Key Pressed!";
+        }
+
+        // Mouse Event
+        function mouseEvent() {
+            document.getElementById("mouseMsg").innerHTML =
+                "Mouse Clicked!";
+        }
+
+        // Window Event
+        function windowEvent() {
+            alert("Window Loaded Successfully!");
+        }
+
+        // Form Event
+        function formEvent() {
+            alert("Form Submitted!");
+        }
+    </script>
+</head>
+
+<body onload="windowEvent()">
+ <h2>JavaScript Events Program</h2>
+ <!-- Key Event -->
+ <h3>1. Key Event</h3>
+ <input type="text" onkeyup="keyEvent()" 
+ placeholder="Type something">
+ <p id="keyMsg"></p>
+ <!-- Mouse Event -->
+ <h3>2. Mouse Event</h3>
+ <button onclick="mouseEvent()">
+ Click Me
+ </button>
+ <p id="mouseMsg"></p>
+ <!-- Form Event -->
+ <h3>3. Form Event</h3>
+ <form onsubmit="formEvent()">
+ Name:
+ <input type="text" required>
+ <input type="submit" value="Submit">
+ </form>
+</body>
+</html>
